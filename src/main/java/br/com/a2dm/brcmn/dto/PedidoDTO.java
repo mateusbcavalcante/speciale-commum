@@ -20,6 +20,7 @@ public class PedidoDTO {
 	private String codParcelas;
 	private List<ProdutoDTO> produtos;
 	private UsuarioDTO usuarioCadastro;
+	private boolean isAdmin;
 
 	public BigInteger getIdCliente() {
 		return idCliente;
@@ -131,5 +132,13 @@ public class PedidoDTO {
 
 	public void setCodParcelas(String codParcelas) {
 		this.codParcelas = codParcelas;
+	}
+
+	public boolean isAdmin() {
+		return isAdmin;
+	}
+
+	public void setAdmin(boolean isAdmin) {
+		this.isAdmin = isAdmin;
 	}
 }
