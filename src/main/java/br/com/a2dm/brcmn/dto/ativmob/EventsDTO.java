@@ -1,14 +1,15 @@
 package br.com.a2dm.brcmn.dto.ativmob;
 
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
+
 
 public class EventsDTO {
-    private int maxNumEvents;
-    private Date startDateTime;
-    private List<EventDTO> events;
-    private int resultCode;
-    private String resultMsg;
+    public int maxNumEvents;
+    public Date startDateTime;
+    public ArrayList<EventDTO> events;
+    public int resultCode;
+    public String resultMsg;
 
     public int getMaxNumEvents() {
         return maxNumEvents;
@@ -26,11 +27,11 @@ public class EventsDTO {
         this.startDateTime = startDateTime;
     }
 
-    public List<EventDTO> getEvents() {
+    public ArrayList<EventDTO> getEvents() {
         return events;
     }
 
-    public void setEvents(List<EventDTO> events) {
+    public void setEvents(ArrayList<EventDTO> events) {
         this.events = events;
     }
 

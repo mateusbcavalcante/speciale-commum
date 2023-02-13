@@ -1,10 +1,11 @@
 package br.com.a2dm.brcmn.dto.ativmob;
 
 public class FormDTO {
-    private String type;
-    private String label;
-    private String url;
-    private String value;
+
+    public String type;
+    public String label;
+    public String url;
+    public String value;
 
     public String getType() {
         return type;
@@ -38,4 +39,3 @@ public class FormDTO {
         this.value = value;
     }
 }
-
