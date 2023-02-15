@@ -5,11 +5,11 @@ import java.util.Date;
 
 
 public class EventsDTO {
-    public int maxNumEvents;
-    public Date startDateTime;
-    public ArrayList<EventDTO> events;
-    public int resultCode;
-    public String resultMsg;
+    private int maxNumEvents;
+    private Date startDateTime;
+    private ArrayList<EventDTO> events;
+    private int resultCode;
+    private String resultMsg;
 
     public int getMaxNumEvents() {
         return maxNumEvents;

@@ -4,20 +4,20 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class EventDTO {
-    public String storeCNPJ;
-    public String event_id;
-    public String event_code;
-    public String event_title;
-    public Date event_dth;
-    public String order_number;
-    public String invoice_number;
-    public String agent_code;
-    public String agent_name;
-    public String lat;
-    public String lng;
-    public String codigo_roteiro;
-    public String link_rastreamento;
-    public ArrayList<FormDTO> form;
+    private String storeCNPJ;
+    private String event_id;
+    private String event_code;
+    private String event_title;
+    private Date event_dth;
+    private String order_number;
+    private String invoice_number;
+    private String agent_code;
+    private String agent_name;
+    private String lat;
+    private String lng;
+    private String codigo_roteiro;
+    private String link_rastreamento;
+    private ArrayList<FormDTO> form;
 
     public String getStoreCNPJ() {
         return storeCNPJ;
