@@ -1,9 +1,19 @@
 package br.com.a2dm.brcmn.entity.ativmob;
 
-import org.hibernate.annotations.Proxy;
-
-import javax.persistence.*;
 import java.math.BigInteger;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.Proxy;
 
 @Entity
 @Table(name = "tb_ativmob_form", schema="ped")
@@ -28,10 +38,10 @@ public class Form {
     @Column(name = "value")
     private String value;
 
-    @ManyToOne
-    @JoinColumn(name = "event_id")
-    private Event event;
-
+    @ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "event_id")
+	private Event event;
+    
     public BigInteger getIdForm() {
         return idForm;
     }

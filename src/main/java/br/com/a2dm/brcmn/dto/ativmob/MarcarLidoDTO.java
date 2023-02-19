@@ -1,17 +1,16 @@
 package br.com.a2dm.brcmn.dto.ativmob;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
-import java.util.ArrayList;
+import java.util.List;
 
 public class MarcarLidoDTO {
-    private ArrayList<String> events_ids;
+	
+    private List<String> events_ids;
 
-    public ArrayList<String> getEventsIds() {
+    public List<String> getEventsIds() {
         return events_ids;
     }
 
-    public void setEventsIds(ArrayList<String> eventsIds) {
+    public void setEventsIds(List<String> eventsIds) {
         this.events_ids = eventsIds;
     }
 }
