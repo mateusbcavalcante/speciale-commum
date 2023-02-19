@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.Date;
 
 
-public class EventsDTO {
+public class OrderDTO {
     private int maxNumEvents;
     private Date startDateTime;
-    private ArrayList<EventDTO> events;
+    private ArrayList<EventDTO> eventDTOS;
     private int resultCode;
     private String resultMsg;
 
@@ -28,11 +28,11 @@ public class EventsDTO {
     }
 
     public ArrayList<EventDTO> getEvents() {
-        return events;
+        return eventDTOS;
     }
 
-    public void setEvents(ArrayList<EventDTO> events) {
-        this.events = events;
+    public void setEvents(ArrayList<EventDTO> eventDTOS) {
+        this.eventDTOS = eventDTOS;
     }
 
     public int getResultCode() {

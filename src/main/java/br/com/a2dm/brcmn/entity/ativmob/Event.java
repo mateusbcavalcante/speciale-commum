@@ -1,32 +1,63 @@
-package br.com.a2dm.brcmn.dto.ativmob;
+package br.com.a2dm.brcmn.entity.ativmob;
 
+import org.hibernate.annotations.Proxy;
+
+import javax.persistence.*;
+import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
-public class EventDTO {
-    private String storeCNPJ;
+@Entity
+@Table(name = "tb_ativmob_event", schema="ped")
+@Proxy(lazy = true)
+public class Event implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    @Column(name = "event_id")
     private BigInteger event_id;
+
+    @Column(name = "store_cnpj")
+    private String storeCNPJ;
+
+    @Column(name = "event_code")
     private String event_code;
+
+    @Column(name = "event_title")
     private String event_title;
+
+    @Column(name = "event_dth")
     private Date event_dth;
+
+    @Column(name = "order_number")
     private String order_number;
+
+    @Column(name = "invoice_number")
     private String invoice_number;
+
+    @Column(name = "agent_code")
     private String agent_code;
+
+    @Column(name = "agent_name")
     private String agent_name;
+
+    @Column(name = "lat")
     private String lat;
+
+    @Column(name = "lng")
     private String lng;
+
+    @Column(name = "codigo_roteiro")
     private String codigo_roteiro;
+
+    @Column(name = "link_rastreamento")
     private String link_rastreamento;
-    private ArrayList<FormDTO> form;
 
-    public String getStoreCNPJ() {
-        return storeCNPJ;
-    }
-
-    public void setStoreCNPJ(String storeCNPJ) {
-        this.storeCNPJ = storeCNPJ;
-    }
+    @OneToMany(mappedBy = "event", cascade = CascadeType.ALL)
+    private List<Form> forms = new ArrayList<>();
 
     public BigInteger getEvent_id() {
         return event_id;
@@ -34,6 +65,14 @@ public class EventDTO {
 
     public void setEvent_id(BigInteger event_id) {
         this.event_id = event_id;
+    }
+
+    public String getStoreCNPJ() {
+        return storeCNPJ;
+    }
+
+    public void setStoreCNPJ(String storeCNPJ) {
+        this.storeCNPJ = storeCNPJ;
     }
 
     public String getEvent_code() {
@@ -124,11 +163,11 @@ public class EventDTO {
         this.link_rastreamento = link_rastreamento;
     }
 
-    public ArrayList<FormDTO> getForm() {
-        return form;
+    public List<Form> getForms() {
+        return forms;
     }
 
-    public void setForm(ArrayList<FormDTO> form) {
-        this.form = form;
+    public void setForms(List<Form> forms) {
+        this.forms = forms;
     }
 }
