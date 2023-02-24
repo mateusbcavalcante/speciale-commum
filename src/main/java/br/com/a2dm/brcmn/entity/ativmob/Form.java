@@ -36,10 +36,13 @@ public class Form {
     private String url;
 
     @Column(name = "value")
-    private String value;
+    private Integer value;
+    
+    @Column(name = "id_event")
+	private BigInteger idEvent;
 
     @ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "event_id")
+	@JoinColumn(name = "id_event", insertable = false, updatable = false)
 	private Event event;
     
     public BigInteger getIdForm() {
@@ -74,11 +77,11 @@ public class Form {
         this.url = url;
     }
 
-    public String getValue() {
+    public Integer getValue() {
         return value;
     }
 
-    public void setValue(String value) {
+    public void setValue(Integer value) {
         this.value = value;
     }
 
@@ -89,4 +92,12 @@ public class Form {
     public void setEvent(Event event) {
         this.event = event;
     }
+
+	public BigInteger getIdEvent() {
+		return idEvent;
+	}
+
+	public void setIdEvent(BigInteger idEvent) {
+		this.idEvent = idEvent;
+	}
 }

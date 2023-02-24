@@ -5,7 +5,7 @@ public class FormDTO {
     private String type;
     private String label;
     private String url;
-    private String value;
+    private Integer value;
 
     public String getType() {
         return type;
@@ -31,11 +31,11 @@ public class FormDTO {
         this.url = url;
     }
 
-    public String getValue() {
+    public Integer getValue() {
         return value;
     }
 
-    public void setValue(String value) {
+    public void setValue(Integer value) {
         this.value = value;
     }
 }

@@ -2,19 +2,19 @@ package br.com.a2dm.brcmn.entity.ativmob;
 
 import java.io.Serializable;
 import java.math.BigInteger;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import org.hibernate.annotations.Proxy;
 
@@ -70,8 +70,20 @@ public class Event implements Serializable {
     @Column(name = "link_rastreamento")
     private String link_rastreamento;
 
-    @OneToMany(mappedBy = "event", cascade = CascadeType.ALL)
-    private List<Form> forms = new ArrayList<>();
+    @OneToMany(mappedBy="event", fetch = FetchType.LAZY)
+    private List<Form> forms;
+    
+    @Transient
+	private String imagem;
+    
+    public Event() {
+    	super();
+    }
+    
+	public Event(String imagem, List<Form> forms) {
+		this.imagem = imagem;
+		this.forms = forms;
+	}
 
 	public BigInteger getId_event() {
 		return id_event;
@@ -191,5 +203,13 @@ public class Event implements Serializable {
 
 	public void setForms(List<Form> forms) {
 		this.forms = forms;
+	}
+
+	public String getImagem() {
+		return imagem;
+	}
+
+	public void setImagem(String imagem) {
+		this.imagem = imagem;
 	}
 }
