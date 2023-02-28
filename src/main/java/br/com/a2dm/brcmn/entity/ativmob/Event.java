@@ -74,6 +74,9 @@ public class Event implements Serializable {
     @OneToMany(mappedBy="event", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Form> forms;
     
+    @Column(name = "status")
+    private String status;		
+    
     @Transient
 	private String imagem;
     
@@ -205,6 +208,14 @@ public class Event implements Serializable {
 	public void setForms(List<Form> forms) {
 		this.forms = forms;
 	}
+	
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
 
 	public String getImagem() {
 		return imagem;
@@ -213,4 +224,5 @@ public class Event implements Serializable {
 	public void setImagem(String imagem) {
 		this.imagem = imagem;
 	}
+	
 }
