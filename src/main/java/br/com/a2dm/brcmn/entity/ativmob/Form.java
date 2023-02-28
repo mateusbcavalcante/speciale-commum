@@ -36,7 +36,7 @@ public class Form {
     private String url;
 
     @Column(name = "value")
-    private Integer value;
+    private String value;
     
     @Column(name = "id_event")
 	private BigInteger idEvent;
@@ -45,7 +45,22 @@ public class Form {
 	@JoinColumn(name = "id_event", insertable = false, updatable = false)
 	private Event event;
     
-    public BigInteger getIdForm() {
+    public Form() {
+		super();
+	}
+
+	public Form(String type, String label, String url, String value, BigInteger idEvent,
+			Event event) {
+		super();
+		this.type = type;
+		this.label = label;
+		this.url = url;
+		this.value = value;
+		this.idEvent = idEvent;
+		this.event = event;
+	}
+
+	public BigInteger getIdForm() {
         return idForm;
     }
 
@@ -77,11 +92,11 @@ public class Form {
         this.url = url;
     }
 
-    public Integer getValue() {
+    public String getValue() {
         return value;
     }
 
-    public void setValue(Integer value) {
+    public void setValue(String value) {
         this.value = value;
     }
 

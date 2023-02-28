@@ -18,7 +18,7 @@ public class EventDTO {
     private String lng;
     private String codigo_roteiro;
     private String link_rastreamento;
-    private ArrayList<FormDTO> form;
+    private ArrayList<FormDTO> forms;
 
     public String getStoreCNPJ() {
         return storeCNPJ;
@@ -124,11 +124,11 @@ public class EventDTO {
         this.link_rastreamento = link_rastreamento;
     }
 
-    public ArrayList<FormDTO> getForm() {
-        return form;
+    public ArrayList<FormDTO> getForms() {
+        return forms;
     }
 
-    public void setForm(ArrayList<FormDTO> form) {
-        this.form = form;
+    public void setForm(ArrayList<FormDTO> forms) {
+        this.forms = forms;
     }
 }
