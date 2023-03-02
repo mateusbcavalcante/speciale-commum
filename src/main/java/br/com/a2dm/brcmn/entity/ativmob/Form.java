@@ -15,6 +15,8 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.Proxy;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "tb_ativmob_form", schema="ped")
 @SequenceGenerator(name = "SQ_FORM", sequenceName = "SQ_FORM", allocationSize = 1)
@@ -36,11 +38,12 @@ public class Form {
     private String url;
 
     @Column(name = "value")
-    private String value;
+    private Integer value;
     
     @Column(name = "id_event")
 	private BigInteger idEvent;
 
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "id_event", insertable = false, updatable = false)
 	private Event event;
@@ -49,7 +52,7 @@ public class Form {
 		super();
 	}
 
-	public Form(String type, String label, String url, String value, BigInteger idEvent,
+	public Form(String type, String label, String url, Integer value, BigInteger idEvent,
 			Event event) {
 		super();
 		this.type = type;
@@ -92,11 +95,11 @@ public class Form {
         this.url = url;
     }
 
-    public String getValue() {
+    public Integer getValue() {
         return value;
     }
 
-    public void setValue(String value) {
+    public void setValue(Integer value) {
         this.value = value;
     }
 
