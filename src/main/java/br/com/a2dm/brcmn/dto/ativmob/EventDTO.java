@@ -18,7 +18,10 @@ public class EventDTO {
     private String lng;
     private String codigo_roteiro;
     private String link_rastreamento;
-    private ArrayList<FormDTO> forms;
+    private String razao_social_dest;
+	private String nome_fantasia_dest;
+	private String codigo_destino;
+    private ArrayList<FormDTO> form;
 
     public String getStoreCNPJ() {
         return storeCNPJ;
@@ -122,13 +125,37 @@ public class EventDTO {
 
     public void setLink_rastreamento(String link_rastreamento) {
         this.link_rastreamento = link_rastreamento;
-    }
+    } 
 
-    public ArrayList<FormDTO> getForms() {
-        return forms;
-    }
+    public String getRazao_social_dest() {
+		return razao_social_dest;
+	}
 
-    public void setForm(ArrayList<FormDTO> forms) {
-        this.forms = forms;
+	public void setRazao_social_dest(String razao_social_dest) {
+		this.razao_social_dest = razao_social_dest;
+	}
+
+	public String getNome_fantasia_dest() {
+		return nome_fantasia_dest;
+	}
+
+	public void setNome_fantasia_dest(String nome_fantasia_dest) {
+		this.nome_fantasia_dest = nome_fantasia_dest;
+	}
+
+	public String getCodigo_destino() {
+		return codigo_destino;
+	}
+
+	public void setCodigo_destino(String codigo_destino) {
+		this.codigo_destino = codigo_destino;
+	}
+
+	public ArrayList<FormDTO> getForms() {
+        return form;
     }
+	
+	public void setForm(ArrayList<FormDTO> form) {
+		this.form = form;
+	}
 }

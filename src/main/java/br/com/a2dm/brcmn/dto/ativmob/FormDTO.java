@@ -6,6 +6,8 @@ public class FormDTO {
     private String label;
     private String url;
     private String value;
+    private String codigo;
+    private String integ_id;
 
     public String getType() {
         return type;
@@ -38,4 +40,21 @@ public class FormDTO {
     public void setValue(String value) {
         this.value = value;
     }
+
+	public String getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
+
+	public String getInteg_id() {
+		return integ_id;
+	}
+
+	public void setInteg_id(String integ_id) {
+		this.integ_id = integ_id;
+	}
+   
 }
