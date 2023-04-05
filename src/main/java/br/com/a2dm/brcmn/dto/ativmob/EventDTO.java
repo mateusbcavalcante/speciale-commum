@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class EventDTO {
+	
     private String storeCNPJ;
     private BigInteger event_id;
     private String event_code;
