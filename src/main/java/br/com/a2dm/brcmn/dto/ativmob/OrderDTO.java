@@ -7,7 +7,7 @@ import java.util.Date;
 public class OrderDTO {
     private int maxNumEvents;
     private Date startDateTime;
-    private ArrayList<EventDTO> eventsDTO;
+    private ArrayList<EventDTO> events;
     private int resultCode;
     private String resultMsg;
 
@@ -28,14 +28,14 @@ public class OrderDTO {
     }
 
     public ArrayList<EventDTO> getEvents() {
-        return eventsDTO;
-    }
+		return events;
+	}
 
-    public void setEvents(ArrayList<EventDTO> eventDTOS) {
-        this.eventsDTO = eventDTOS;
-    }
+	public void setEvents(ArrayList<EventDTO> events) {
+		this.events = events;
+	}
 
-    public int getResultCode() {
+	public int getResultCode() {
         return resultCode;
     }
 
