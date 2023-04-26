@@ -4,13 +4,15 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class EventDTO {
 	
     private String storeCNPJ;
     private BigInteger event_id;
     private String event_code;
     private String event_title;
-    private Date event_dth;
+    private String event_dth;
     private String order_number;
     private String invoice_number;
     private String agent_code;
@@ -56,11 +58,11 @@ public class EventDTO {
         this.event_title = event_title;
     }
 
-    public Date getEvent_dth() {
+    public String getEvent_dth() {
         return event_dth;
     }
 
-    public void setEvent_dth(Date event_dth) {
+    public void setEvent_dth(String event_dth) {
         this.event_dth = event_dth;
     }
 
