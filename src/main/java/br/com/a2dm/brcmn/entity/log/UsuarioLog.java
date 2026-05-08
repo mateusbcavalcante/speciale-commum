@@ -87,30 +87,6 @@ public class UsuarioLog implements Serializable
 	@Column(name = "num_conselho")
 	private BigInteger numConselho;
 	
-	@Column(name = "cep")
-	private String cep;
-
-	@Column(name = "logradouro")
-	private String logradouro;
-	
-	@Column(name = "num_endereco")
-	private BigInteger numEndereco;
-	
-	@Column(name = "bairro")
-	private String bairro;
-	
-	@Column(name = "cidade")
-	private String cidade;
-	
-	@Column(name = "id_estado")
-	private BigInteger idEstado;
-	
-	@Column(name = "complemento")
-	private String complemento;
-	
-	@Column(name = "referencia")
-	private String referencia;
-	
 	@Column(name = "id_grupo")
 	private BigInteger idGrupo;
 	
@@ -253,70 +229,6 @@ public class UsuarioLog implements Serializable
 
 	public void setNumConselho(BigInteger numConselho) {
 		this.numConselho = numConselho;
-	}
-
-	public String getCep() {
-		return cep;
-	}
-
-	public void setCep(String cep) {
-		this.cep = cep;
-	}
-
-	public String getLogradouro() {
-		return logradouro;
-	}
-
-	public void setLogradouro(String logradouro) {
-		this.logradouro = logradouro;
-	}
-
-	public BigInteger getNumEndereco() {
-		return numEndereco;
-	}
-
-	public void setNumEndereco(BigInteger numEndereco) {
-		this.numEndereco = numEndereco;
-	}
-
-	public String getBairro() {
-		return bairro;
-	}
-
-	public void setBairro(String bairro) {
-		this.bairro = bairro;
-	}
-
-	public String getCidade() {
-		return cidade;
-	}
-
-	public void setCidade(String cidade) {
-		this.cidade = cidade;
-	}
-
-	public BigInteger getIdEstado() {
-		return idEstado;
-	}
-
-	public void setIdEstado(BigInteger idEstado) {
-		this.idEstado = idEstado;
-	}
-
-	public String getComplemento() {
-		return complemento;
-	}
-
-	public void setComplemento(String complemento) {
-		this.complemento = complemento;
-	}
-
-	public String getReferencia() {
-		return referencia;
-	}
-
-	public void setReferencia(String referencia) {
-		this.referencia = referencia;
 	}
 
 	public BigInteger[] getArrayPermissoes() {

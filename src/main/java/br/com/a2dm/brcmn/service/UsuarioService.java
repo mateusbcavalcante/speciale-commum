@@ -388,11 +388,6 @@ public class UsuarioService extends A2DMHbNgc<Usuario>
 	         criteria.createAlias("usuarioAlt", "usuarioAlt", JoinType.LEFT_OUTER_JOIN);
 	    }
 		
-		if ((join & JOIN_ESTADO) != 0)
-	    {
-	         criteria.createAlias("estado", "estado", JoinType.LEFT_OUTER_JOIN);
-	    }
-		
 		if ((join & JOIN_CLIENTE) != 0)
 	    {
 	         criteria.createAlias("cliente", "cliente");
