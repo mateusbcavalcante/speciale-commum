@@ -13,6 +13,8 @@ public class ProdutoDTO {
 	private String flgAtivo;
 	private Double valorUnitario;
 	private String unidade;
+	private BigInteger codigoFamiliaOmie;
+	private String descricaoFamilia;
 	
 	public BigInteger getIdPedidoProduto() {
 		return idPedidoProduto;
@@ -84,6 +86,22 @@ public class ProdutoDTO {
 
 	public void setUnidade(String unidade) {
 		this.unidade = unidade;
+	}
+
+	public BigInteger getCodigoFamiliaOmie() {
+		return codigoFamiliaOmie;
+	}
+
+	public void setCodigoFamiliaOmie(BigInteger codigoFamiliaOmie) {
+		this.codigoFamiliaOmie = codigoFamiliaOmie;
+	}
+
+	public String getDescricaoFamilia() {
+		return descricaoFamilia;
+	}
+
+	public void setDescricaoFamilia(String descricaoFamilia) {
+		this.descricaoFamilia = descricaoFamilia;
 	}
 
 }

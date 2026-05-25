@@ -14,6 +14,7 @@ public class PedidoDTO {
 	private BigInteger idOpcaoEntrega;
 	private Date dataPedido;
 	private String observacao;
+	private String numeroPedidoCliente;
 	private String flgAtivo;
 	private BigInteger idExternoOmie;
 	private BigInteger codVend;
@@ -84,6 +85,14 @@ public class PedidoDTO {
 
 	public void setObservacao(String observacao) {
 		this.observacao = observacao;
+	}
+
+	public String getNumeroPedidoCliente() {
+		return numeroPedidoCliente;
+	}
+
+	public void setNumeroPedidoCliente(String numeroPedidoCliente) {
+		this.numeroPedidoCliente = numeroPedidoCliente;
 	}
 	
 	public BigInteger getIdExternoOmie() {
